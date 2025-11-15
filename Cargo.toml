@@ -1,0 +1,24 @@
+[workspace]
+resolver = "3"
+members = ["ipceed", "ipceed-types"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+
+[workspace.dependencies]
+async-trait = "0.1"
+tokio = { version = "1" }
+tokio-util = "0.7"
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2"
+serde_json = "1.0"
+tracing = "0.1"
+tempfile = "3.20"
+interprocess = "2"
+uuid = { version = "1.0", features = ["v4"] }
+dashmap = "6"
+futures = "0.3"
+
+ipceed = { path = "./ipceed" }
+ipceed-types = { path = "./ipceed-types" }

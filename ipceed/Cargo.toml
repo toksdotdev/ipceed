@@ -1,0 +1,23 @@
+[package]
+name = "ipceed"
+version = "0.0.1"
+description = "Async multi-pattern IPC library"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["rc"] }
+ipceed-types = { workspace = true }
+interprocess = { workspace = true, features = ["tokio"] }
+tokio = { workspace = true, features = ["rt", "signal", "macros"] }
+serde_json = { workspace = true }
+uuid = { workspace = true, features = ["serde"] }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+dashmap = { workspace = true }
+async-trait = { workspace = true }
+tempfile = { workspace = true }
+tokio-util = { workspace = true, features = ["rt", "join-map"] }
+futures = { workspace = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
